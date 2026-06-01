@@ -1,0 +1,165 @@
+{
+  "currentCounts": {
+    "byOperation": {
+      "map": 4,
+      "revalidate": 4,
+      "review": 242
+    },
+    "bySplit": {
+      "all": 250
+    },
+    "metadataOnly": 0,
+    "redacted": 2,
+    "repositories": {
+      "known": 3,
+      "rows": 250,
+      "unknownRows": 0
+    },
+    "reviewQuality": {
+      "clean": 82,
+      "nonEmpty": 160,
+      "unknown": 0
+    },
+    "total": 250
+  },
+  "gaps": {
+    "map": {
+      "current": 4,
+      "gap": 21,
+      "met": false,
+      "target": 25
+    },
+    "revalidate": {
+      "current": 4,
+      "gap": 96,
+      "met": false,
+      "target": 100
+    },
+    "review": {
+      "current": 242,
+      "gap": 258,
+      "met": false,
+      "target": 500
+    }
+  },
+  "nextCaptureBatchShape": {
+    "expectedRemainingGapsAfterBatch": {
+      "map": 0,
+      "revalidate": 0,
+      "review": 0
+    },
+    "layout": {
+      "mapOnlyRepositories": 15,
+      "reviewHeavyRepositories": 6
+    },
+    "operationTargets": {
+      "map": 21,
+      "revalidate": 96,
+      "review": 258
+    },
+    "perRepositoryShape": {
+      "mapOnly": {
+        "mapCapturesPerRepository": 1,
+        "needs": [
+          "map"
+        ],
+        "repositoryCount": 15
+      },
+      "reviewHeavy": {
+        "acceptedReviewCapturesPerRepository": {
+          "max": 43,
+          "min": 43
+        },
+        "mapCapturesPerRepository": 1,
+        "needs": [
+          "map",
+          "review",
+          "revalidate"
+        ],
+        "repositoryCount": 6,
+        "usefulRevalidateCapturesPerRepository": {
+          "max": 16,
+          "min": 16
+        }
+      }
+    },
+    "repositoryCount": 21,
+    "revalidatePrerequisite": "Revalidate requires findings to exist before useful revalidation captures can be generated."
+  },
+  "notes": [
+    "The planner reads /Users/adamjackson/Projects/gemma-training/reports/clawpatch-corpus-coverage.json and emits no raw capture content.",
+    "Review remains first because it is the primary model-quality target; revalidate depends on review findings; map closes repository inventory coverage."
+  ],
+  "planner": {
+    "coverageSource": "coverage-report",
+    "deterministic": true,
+    "name": "bounded-phase-2-corpus-expansion",
+    "sourcePaths": {
+      "coverage": "/Users/adamjackson/Projects/gemma-training/reports/clawpatch-corpus-coverage.json"
+    }
+  },
+  "prioritizedOperations": [
+    {
+      "blocked": false,
+      "current": 242,
+      "gap": 258,
+      "operation": "review",
+      "priority": 1,
+      "reason": "Primary model-quality target and largest accepted-example shortfall.",
+      "target": 500
+    },
+    {
+      "blocked": false,
+      "current": 4,
+      "gap": 96,
+      "operation": "revalidate",
+      "priority": 2,
+      "reason": "Second-stage target can use existing non-empty review findings plus new review findings.",
+      "target": 100
+    },
+    {
+      "blocked": false,
+      "current": 4,
+      "gap": 21,
+      "operation": "map",
+      "priority": 3,
+      "reason": "Repository inventory coverage should expand beyond the current 3 known repositories.",
+      "target": 25
+    }
+  ],
+  "privacy": {
+    "emittedValues": [
+      "counts",
+      "paths"
+    ],
+    "omittedValues": [
+      "assistant content",
+      "private prompts",
+      "raw captures",
+      "raw outputs",
+      "record identifiers",
+      "schemas"
+    ]
+  },
+  "recommendedMinimumNewRepositoryCount": {
+    "assumptions": {
+      "acceptedReviewCapturesPerReviewHeavyRepository": 43,
+      "mapCapturesPerNewRepository": 1,
+      "usefulRevalidateCapturesPerReviewHeavyRepository": 16
+    },
+    "basis": "Minimum new repositories needed under bounded per-repository capture assumptions.",
+    "components": {
+      "diversityRepositories": 2,
+      "mapRepositories": 21,
+      "revalidateHeavyRepositories": 6,
+      "reviewHeavyRepositories": 6
+    },
+    "count": 21
+  },
+  "schemaVersion": 1,
+  "targets": {
+    "map": 25,
+    "revalidate": 100,
+    "review": 500
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "deterministic": true,
+  "thresholds": {
+    "f1": 0.8,
+    "cleanAccuracy": 0.95,
+    "schemaValidRate": 1,
+    "evidenceValidRate": 1
+  },
+  "reports": [
+    {
+      "reportIndex": 0,
+      "operation": "review",
+      "rows": {
+        "reference": 4,
+        "referenceJsonLineErrors": 0,
+        "referenceOutputParseable": 4,
+        "referenceSchemaValid": 4,
+        "cleanReference": 2,
+        "findingReference": 2
+      },
+      "models": [
+        {
+          "label": "base",
+          "rows": {
+            "reference": 4,
+            "prediction": 4,
+            "extraPrediction": 0,
+            "missingPrediction": 0,
+            "jsonLineErrors": 0
+          },
+          "validity": {
+            "parse": {
+              "validRows": 4,
+              "rate": 1
+            },
+            "schema": {
+              "validRows": 2,
+              "rate": 0.5
+            },
+            "evidence": {
+              "validRows": 3,
+              "rate": 0.75
+            }
+          },
+          "findings": {
+            "reference": 2,
+            "predicted": 4,
+            "matched": 0
+          },
+          "metrics": {
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "cleanAccuracy": 0,
+            "cleanReferenceRows": 2,
+            "cleanCorrectRows": 0
+          },
+          "latency": {
+            "presentRows": 4,
+            "validRows": 4,
+            "invalidRows": 0,
+            "sum": 132620.047,
+            "avg": 33155.01175,
+            "min": 26529.094,
+            "max": 41420.21
+          },
+          "thresholds": {
+            "f1": {
+              "metric": "f1",
+              "actual": 0,
+              "threshold": 0.8,
+              "passed": false
+            },
+            "cleanAccuracy": {
+              "metric": "cleanAccuracy",
+              "actual": 0,
+              "threshold": 0.95,
+              "passed": false
+            },
+            "schemaValidRate": {
+              "metric": "schemaValidRate",
+              "actual": 0.5,
+              "threshold": 1,
+              "passed": false
+            },
+            "evidenceValidRate": {
+              "metric": "evidenceValidRate",
+              "actual": 0.75,
+              "threshold": 1,
+              "passed": false
+            }
+          },
+          "passed": false
+        },
+        {
+          "label": "adapter",
+          "rows": {
+            "reference": 4,
+            "prediction": 4,
+            "extraPrediction": 0,
+            "missingPrediction": 0,
+            "jsonLineErrors": 0
+          },
+          "validity": {
+            "parse": {
+              "validRows": 4,
+              "rate": 1
+            },
+            "schema": {
+              "validRows": 2,
+              "rate": 0.5
+            },
+            "evidence": {
+              "validRows": 3,
+              "rate": 0.75
+            }
+          },
+          "findings": {
+            "reference": 2,
+            "predicted": 4,
+            "matched": 0
+          },
+          "metrics": {
+            "precision": 0,
+            "recall": 0,
+            "f1": 0,
+            "cleanAccuracy": 0,
+            "cleanReferenceRows": 2,
+            "cleanCorrectRows": 0
+          },
+          "latency": {
+            "presentRows": 4,
+            "validRows": 4,
+            "invalidRows": 0,
+            "sum": 139489.682,
+            "avg": 34872.4205,
+            "min": 27978.027,
+            "max": 42927.491
+          },
+          "thresholds": {
+            "f1": {
+              "metric": "f1",
+              "actual": 0,
+              "threshold": 0.8,
+              "passed": false
+            },
+            "cleanAccuracy": {
+              "metric": "cleanAccuracy",
+              "actual": 0,
+              "threshold": 0.95,
+              "passed": false
+            },
+            "schemaValidRate": {
+              "metric": "schemaValidRate",
+              "actual": 0.5,
+              "threshold": 1,
+              "passed": false
+            },
+            "evidenceValidRate": {
+              "metric": "evidenceValidRate",
+              "actual": 0.75,
+              "threshold": 1,
+              "passed": false
+            }
+          },
+          "passed": false
+        }
+      ],
+      "passed": false
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,1608 @@
+{
+  "schemaVersion": 1,
+  "roots": {
+    "datasetRoot": "/Users/adamjackson/Projects/gemma-training/datasets",
+    "capturesRoot": "/Users/adamjackson/Projects/gemma-training/captures"
+  },
+  "targetMinimums": {
+    "review": 500,
+    "revalidate": 100,
+    "map": 25
+  },
+  "gaps": {
+    "map": {
+      "current": 4,
+      "target": 25,
+      "gap": 21,
+      "met": false
+    },
+    "revalidate": {
+      "current": 4,
+      "target": 100,
+      "gap": 96,
+      "met": false
+    },
+    "review": {
+      "current": 242,
+      "target": 500,
+      "gap": 258,
+      "met": false
+    }
+  },
+  "deduplicatedCorpus": {
+    "basis": "Unique operation/captureId records from dataset all.jsonl files.",
+    "counts": {
+      "total": 250,
+      "byOperation": {
+        "map": 4,
+        "revalidate": 4,
+        "review": 242
+      },
+      "bySplit": {
+        "all": 250
+      },
+      "byRepo": {
+        "click": 69,
+        "hono": 91,
+        "ripgrep": 90
+      },
+      "byOperationSplitRepo": {
+        "map": {
+          "all": {
+            "click": 2,
+            "hono": 1,
+            "ripgrep": 1
+          }
+        },
+        "revalidate": {
+          "all": {
+            "click": 2,
+            "hono": 1,
+            "ripgrep": 1
+          }
+        },
+        "review": {
+          "all": {
+            "click": 65,
+            "hono": 89,
+            "ripgrep": 88
+          }
+        }
+      },
+      "reviewQuality": {
+        "clean": 82,
+        "nonEmpty": 160,
+        "unknown": 0
+      },
+      "redacted": 2,
+      "metadataOnly": 0
+    }
+  },
+  "aggregateDatasetRows": {
+    "basis": "Every local dataset JSONL row, including derivative datasets and split files.",
+    "counts": {
+      "total": 1084,
+      "byOperation": {
+        "map": 36,
+        "revalidate": 36,
+        "review": 1012
+      },
+      "bySplit": {
+        "all": 508,
+        "hard_boundary": 68,
+        "test": 88,
+        "train": 326,
+        "validation": 94
+      },
+      "byRepo": {
+        "click": 338,
+        "hono": 374,
+        "ripgrep": 372
+      },
+      "byOperationSplitRepo": {
+        "map": {
+          "all": {
+            "click": 6,
+            "hono": 3,
+            "ripgrep": 3
+          },
+          "hard_boundary": {
+            "click": 6,
+            "hono": 3,
+            "ripgrep": 3
+          },
+          "train": {
+            "click": 6,
+            "hono": 3
+          },
+          "validation": {
+            "ripgrep": 3
+          }
+        },
+        "revalidate": {
+          "all": {
+            "click": 6,
+            "hono": 3,
+            "ripgrep": 3
+          },
+          "hard_boundary": {
+            "click": 6,
+            "hono": 3,
+            "ripgrep": 3
+          },
+          "train": {
+            "click": 6,
+            "hono": 3
+          },
+          "validation": {
+            "ripgrep": 3
+          }
+        },
+        "review": {
+          "all": {
+            "click": 130,
+            "hono": 178,
+            "ripgrep": 176
+          },
+          "hard_boundary": {
+            "click": 42,
+            "ripgrep": 2
+          },
+          "test": {
+            "ripgrep": 88
+          },
+          "train": {
+            "click": 130,
+            "hono": 178
+          },
+          "validation": {
+            "ripgrep": 88
+          }
+        }
+      },
+      "reviewQuality": {
+        "clean": 344,
+        "nonEmpty": 668,
+        "unknown": 0
+      },
+      "redacted": 8,
+      "metadataOnly": 0
+    }
+  },
+  "datasets": [
+    {
+      "name": "clawpatch-gemma-map-v0",
+      "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0",
+      "summary": {
+        "schemaVersion": 1,
+        "operation": "map",
+        "sourceDataset": "ixianbride/clawpatch-gemma-review-v0",
+        "splits": {
+          "train": 3,
+          "validation": 1,
+          "test": 0,
+          "hard_boundary": 4,
+          "all": 4
+        }
+      },
+      "files": [
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/all.jsonl",
+          "split": "all",
+          "lines": 4,
+          "invalidRows": 0,
+          "counts": {
+            "total": 4,
+            "byOperation": {
+              "map": 4
+            },
+            "bySplit": {
+              "all": 4
+            },
+            "byRepo": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "all": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/hard_boundary.jsonl",
+          "split": "hard_boundary",
+          "lines": 4,
+          "invalidRows": 0,
+          "counts": {
+            "total": 4,
+            "byOperation": {
+              "map": 4
+            },
+            "bySplit": {
+              "hard_boundary": 4
+            },
+            "byRepo": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "hard_boundary": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/test.jsonl",
+          "split": "test",
+          "lines": 0,
+          "invalidRows": 0,
+          "counts": {
+            "total": 0,
+            "byOperation": {},
+            "bySplit": {},
+            "byRepo": {},
+            "byOperationSplitRepo": {},
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/train.jsonl",
+          "split": "train",
+          "lines": 3,
+          "invalidRows": 0,
+          "counts": {
+            "total": 3,
+            "byOperation": {
+              "map": 3
+            },
+            "bySplit": {
+              "train": 3
+            },
+            "byRepo": {
+              "click": 2,
+              "hono": 1
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "train": {
+                  "click": 2,
+                  "hono": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/validation.jsonl",
+          "split": "validation",
+          "lines": 1,
+          "invalidRows": 0,
+          "counts": {
+            "total": 1,
+            "byOperation": {
+              "map": 1
+            },
+            "bySplit": {
+              "validation": 1
+            },
+            "byRepo": {
+              "ripgrep": 1
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "validation": {
+                  "ripgrep": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        }
+      ],
+      "counts": {
+        "total": 12,
+        "byOperation": {
+          "map": 12
+        },
+        "bySplit": {
+          "all": 4,
+          "hard_boundary": 4,
+          "train": 3,
+          "validation": 1
+        },
+        "byRepo": {
+          "click": 6,
+          "hono": 3,
+          "ripgrep": 3
+        },
+        "byOperationSplitRepo": {
+          "map": {
+            "all": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "hard_boundary": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "train": {
+              "click": 2,
+              "hono": 1
+            },
+            "validation": {
+              "ripgrep": 1
+            }
+          }
+        },
+        "reviewQuality": {
+          "clean": 0,
+          "nonEmpty": 0,
+          "unknown": 0
+        },
+        "redacted": 0,
+        "metadataOnly": 0
+      }
+    },
+    {
+      "name": "clawpatch-gemma-revalidate-v0",
+      "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0",
+      "summary": {
+        "schemaVersion": 1,
+        "operation": "revalidate",
+        "sourceDataset": "ixianbride/clawpatch-gemma-review-v0",
+        "splits": {
+          "train": 3,
+          "validation": 1,
+          "test": 0,
+          "hard_boundary": 4,
+          "all": 4
+        }
+      },
+      "files": [
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/all.jsonl",
+          "split": "all",
+          "lines": 4,
+          "invalidRows": 0,
+          "counts": {
+            "total": 4,
+            "byOperation": {
+              "revalidate": 4
+            },
+            "bySplit": {
+              "all": 4
+            },
+            "byRepo": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "byOperationSplitRepo": {
+              "revalidate": {
+                "all": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/hard_boundary.jsonl",
+          "split": "hard_boundary",
+          "lines": 4,
+          "invalidRows": 0,
+          "counts": {
+            "total": 4,
+            "byOperation": {
+              "revalidate": 4
+            },
+            "bySplit": {
+              "hard_boundary": 4
+            },
+            "byRepo": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "byOperationSplitRepo": {
+              "revalidate": {
+                "hard_boundary": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/test.jsonl",
+          "split": "test",
+          "lines": 0,
+          "invalidRows": 0,
+          "counts": {
+            "total": 0,
+            "byOperation": {},
+            "bySplit": {},
+            "byRepo": {},
+            "byOperationSplitRepo": {},
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/train.jsonl",
+          "split": "train",
+          "lines": 3,
+          "invalidRows": 0,
+          "counts": {
+            "total": 3,
+            "byOperation": {
+              "revalidate": 3
+            },
+            "bySplit": {
+              "train": 3
+            },
+            "byRepo": {
+              "click": 2,
+              "hono": 1
+            },
+            "byOperationSplitRepo": {
+              "revalidate": {
+                "train": {
+                  "click": 2,
+                  "hono": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/validation.jsonl",
+          "split": "validation",
+          "lines": 1,
+          "invalidRows": 0,
+          "counts": {
+            "total": 1,
+            "byOperation": {
+              "revalidate": 1
+            },
+            "bySplit": {
+              "validation": 1
+            },
+            "byRepo": {
+              "ripgrep": 1
+            },
+            "byOperationSplitRepo": {
+              "revalidate": {
+                "validation": {
+                  "ripgrep": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 0,
+              "nonEmpty": 0,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        }
+      ],
+      "counts": {
+        "total": 12,
+        "byOperation": {
+          "revalidate": 12
+        },
+        "bySplit": {
+          "all": 4,
+          "hard_boundary": 4,
+          "train": 3,
+          "validation": 1
+        },
+        "byRepo": {
+          "click": 6,
+          "hono": 3,
+          "ripgrep": 3
+        },
+        "byOperationSplitRepo": {
+          "revalidate": {
+            "all": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "hard_boundary": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "train": {
+              "click": 2,
+              "hono": 1
+            },
+            "validation": {
+              "ripgrep": 1
+            }
+          }
+        },
+        "reviewQuality": {
+          "clean": 0,
+          "nonEmpty": 0,
+          "unknown": 0
+        },
+        "redacted": 0,
+        "metadataOnly": 0
+      }
+    },
+    {
+      "name": "clawpatch-gemma-v0",
+      "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0",
+      "summary": {
+        "schemaVersion": 1,
+        "createdAt": "2026-05-24T15:56:56.134Z",
+        "sourceCaptureDir": "/Users/adamjackson/Projects/gemma-training/captures/20260522T220000Z-pilot",
+        "systemPromptHash": "7ce589db6b092e27",
+        "totalRows": 250,
+        "hardBoundaryRows": 30,
+        "counts": {
+          "train": {
+            "total": 160,
+            "byOperation": {
+              "map": 3,
+              "revalidate": 3,
+              "review": 154
+            },
+            "byRepo": {
+              "click": 69,
+              "hono": 91
+            },
+            "cleanReview": 27,
+            "nonEmptyReview": 127,
+            "redacted": 2
+          },
+          "validation": {
+            "total": 46,
+            "byOperation": {
+              "map": 1,
+              "revalidate": 1,
+              "review": 44
+            },
+            "byRepo": {
+              "ripgrep": 46
+            },
+            "cleanReview": 27,
+            "nonEmptyReview": 17,
+            "redacted": 0
+          },
+          "test": {
+            "total": 44,
+            "byOperation": {
+              "review": 44
+            },
+            "byRepo": {
+              "ripgrep": 44
+            },
+            "cleanReview": 28,
+            "nonEmptyReview": 16,
+            "redacted": 0
+          }
+        },
+        "splitPolicy": "Repository-aware split: click and hono are train; ripgrep review captures alternate validation/test; non-review ripgrep captures stay validation. Hard-boundary rows come from the retained triage subset.",
+        "privacy": "Rows are derived only from accepted capture records. Records marked metadata-only are excluded. Redacted records remain marked in metadata."
+      },
+      "files": [
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/all.jsonl",
+          "split": "all",
+          "lines": 250,
+          "invalidRows": 0,
+          "counts": {
+            "total": 250,
+            "byOperation": {
+              "map": 4,
+              "revalidate": 4,
+              "review": 242
+            },
+            "bySplit": {
+              "all": 250
+            },
+            "byRepo": {
+              "click": 69,
+              "hono": 91,
+              "ripgrep": 90
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "all": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              },
+              "revalidate": {
+                "all": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              },
+              "review": {
+                "all": {
+                  "click": 65,
+                  "hono": 89,
+                  "ripgrep": 88
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 82,
+              "nonEmpty": 160,
+              "unknown": 0
+            },
+            "redacted": 2,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/hard_boundary.jsonl",
+          "split": "hard_boundary",
+          "lines": 30,
+          "invalidRows": 0,
+          "counts": {
+            "total": 30,
+            "byOperation": {
+              "map": 4,
+              "revalidate": 4,
+              "review": 22
+            },
+            "bySplit": {
+              "hard_boundary": 30
+            },
+            "byRepo": {
+              "click": 25,
+              "hono": 2,
+              "ripgrep": 3
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "hard_boundary": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              },
+              "revalidate": {
+                "hard_boundary": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              },
+              "review": {
+                "hard_boundary": {
+                  "click": 21,
+                  "ripgrep": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 8,
+              "nonEmpty": 14,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/test.jsonl",
+          "split": "test",
+          "lines": 44,
+          "invalidRows": 0,
+          "counts": {
+            "total": 44,
+            "byOperation": {
+              "review": 44
+            },
+            "bySplit": {
+              "test": 44
+            },
+            "byRepo": {
+              "ripgrep": 44
+            },
+            "byOperationSplitRepo": {
+              "review": {
+                "test": {
+                  "ripgrep": 44
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 28,
+              "nonEmpty": 16,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/train.jsonl",
+          "split": "train",
+          "lines": 160,
+          "invalidRows": 0,
+          "counts": {
+            "total": 160,
+            "byOperation": {
+              "map": 3,
+              "revalidate": 3,
+              "review": 154
+            },
+            "bySplit": {
+              "train": 160
+            },
+            "byRepo": {
+              "click": 69,
+              "hono": 91
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "train": {
+                  "click": 2,
+                  "hono": 1
+                }
+              },
+              "revalidate": {
+                "train": {
+                  "click": 2,
+                  "hono": 1
+                }
+              },
+              "review": {
+                "train": {
+                  "click": 65,
+                  "hono": 89
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 27,
+              "nonEmpty": 127,
+              "unknown": 0
+            },
+            "redacted": 2,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/validation.jsonl",
+          "split": "validation",
+          "lines": 46,
+          "invalidRows": 0,
+          "counts": {
+            "total": 46,
+            "byOperation": {
+              "map": 1,
+              "revalidate": 1,
+              "review": 44
+            },
+            "bySplit": {
+              "validation": 46
+            },
+            "byRepo": {
+              "ripgrep": 46
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "validation": {
+                  "ripgrep": 1
+                }
+              },
+              "revalidate": {
+                "validation": {
+                  "ripgrep": 1
+                }
+              },
+              "review": {
+                "validation": {
+                  "ripgrep": 44
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 27,
+              "nonEmpty": 17,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        }
+      ],
+      "counts": {
+        "total": 530,
+        "byOperation": {
+          "map": 12,
+          "revalidate": 12,
+          "review": 506
+        },
+        "bySplit": {
+          "all": 250,
+          "hard_boundary": 30,
+          "test": 44,
+          "train": 160,
+          "validation": 46
+        },
+        "byRepo": {
+          "click": 163,
+          "hono": 184,
+          "ripgrep": 183
+        },
+        "byOperationSplitRepo": {
+          "map": {
+            "all": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "hard_boundary": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "train": {
+              "click": 2,
+              "hono": 1
+            },
+            "validation": {
+              "ripgrep": 1
+            }
+          },
+          "revalidate": {
+            "all": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "hard_boundary": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "train": {
+              "click": 2,
+              "hono": 1
+            },
+            "validation": {
+              "ripgrep": 1
+            }
+          },
+          "review": {
+            "all": {
+              "click": 65,
+              "hono": 89,
+              "ripgrep": 88
+            },
+            "hard_boundary": {
+              "click": 21,
+              "ripgrep": 1
+            },
+            "test": {
+              "ripgrep": 44
+            },
+            "train": {
+              "click": 65,
+              "hono": 89
+            },
+            "validation": {
+              "ripgrep": 44
+            }
+          }
+        },
+        "reviewQuality": {
+          "clean": 172,
+          "nonEmpty": 334,
+          "unknown": 0
+        },
+        "redacted": 4,
+        "metadataOnly": 0
+      }
+    },
+    {
+      "name": "clawpatch-gemma-windowed-v0",
+      "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0",
+      "summary": {
+        "schemaVersion": 1,
+        "createdAt": "2026-05-24T16:01:12.194Z",
+        "sourceDatasetDir": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0",
+        "maxUserChars": 4000,
+        "evidenceRadius": 10,
+        "cleanFileLineBudget": 28,
+        "counts": {
+          "train": {
+            "total": 160,
+            "windowed": 157,
+            "maxPromptBytes": 4000,
+            "byOperation": {
+              "map": 3,
+              "revalidate": 3,
+              "review": 154
+            },
+            "byWindowStrategy": {
+              "prompt-clamp-no-files-section": 3,
+              "unchanged": 3,
+              "evidence-centered-file-window": 127,
+              "clean-review-head-file-window": 27
+            }
+          },
+          "validation": {
+            "total": 46,
+            "windowed": 43,
+            "maxPromptBytes": 4000,
+            "byOperation": {
+              "map": 1,
+              "revalidate": 1,
+              "review": 44
+            },
+            "byWindowStrategy": {
+              "prompt-clamp-no-files-section": 1,
+              "unchanged": 3,
+              "clean-review-head-file-window": 25,
+              "evidence-centered-file-window": 17
+            }
+          },
+          "test": {
+            "total": 44,
+            "windowed": 40,
+            "maxPromptBytes": 4000,
+            "byOperation": {
+              "review": 44
+            },
+            "byWindowStrategy": {
+              "clean-review-head-file-window": 24,
+              "evidence-centered-file-window": 16,
+              "unchanged": 4
+            }
+          },
+          "hard_boundary": {
+            "total": 30,
+            "windowed": 26,
+            "maxPromptBytes": 4000,
+            "byOperation": {
+              "map": 4,
+              "revalidate": 4,
+              "review": 22
+            },
+            "byWindowStrategy": {
+              "prompt-clamp-no-files-section": 4,
+              "unchanged": 4,
+              "evidence-centered-file-window": 14,
+              "clean-review-head-file-window": 8
+            }
+          },
+          "all": {
+            "total": 250,
+            "windowed": 240,
+            "maxPromptBytes": 4000,
+            "byOperation": {
+              "map": 4,
+              "revalidate": 4,
+              "review": 242
+            },
+            "byWindowStrategy": {
+              "prompt-clamp-no-files-section": 4,
+              "unchanged": 10,
+              "evidence-centered-file-window": 160,
+              "clean-review-head-file-window": 76
+            }
+          }
+        },
+        "purpose": "Windowed derivative of clawpatch-gemma-v0 that bounds long prompts while preserving Clawpatch instructions, schemas, and evidence-centered file context for review examples."
+      },
+      "files": [
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/all.jsonl",
+          "split": "all",
+          "lines": 250,
+          "invalidRows": 0,
+          "counts": {
+            "total": 250,
+            "byOperation": {
+              "map": 4,
+              "revalidate": 4,
+              "review": 242
+            },
+            "bySplit": {
+              "all": 250
+            },
+            "byRepo": {
+              "click": 69,
+              "hono": 91,
+              "ripgrep": 90
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "all": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              },
+              "revalidate": {
+                "all": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              },
+              "review": {
+                "all": {
+                  "click": 65,
+                  "hono": 89,
+                  "ripgrep": 88
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 82,
+              "nonEmpty": 160,
+              "unknown": 0
+            },
+            "redacted": 2,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/hard_boundary.jsonl",
+          "split": "hard_boundary",
+          "lines": 30,
+          "invalidRows": 0,
+          "counts": {
+            "total": 30,
+            "byOperation": {
+              "map": 4,
+              "revalidate": 4,
+              "review": 22
+            },
+            "bySplit": {
+              "hard_boundary": 30
+            },
+            "byRepo": {
+              "click": 25,
+              "hono": 2,
+              "ripgrep": 3
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "hard_boundary": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              },
+              "revalidate": {
+                "hard_boundary": {
+                  "click": 2,
+                  "hono": 1,
+                  "ripgrep": 1
+                }
+              },
+              "review": {
+                "hard_boundary": {
+                  "click": 21,
+                  "ripgrep": 1
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 8,
+              "nonEmpty": 14,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/test.jsonl",
+          "split": "test",
+          "lines": 44,
+          "invalidRows": 0,
+          "counts": {
+            "total": 44,
+            "byOperation": {
+              "review": 44
+            },
+            "bySplit": {
+              "test": 44
+            },
+            "byRepo": {
+              "ripgrep": 44
+            },
+            "byOperationSplitRepo": {
+              "review": {
+                "test": {
+                  "ripgrep": 44
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 28,
+              "nonEmpty": 16,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/train.jsonl",
+          "split": "train",
+          "lines": 160,
+          "invalidRows": 0,
+          "counts": {
+            "total": 160,
+            "byOperation": {
+              "map": 3,
+              "revalidate": 3,
+              "review": 154
+            },
+            "bySplit": {
+              "train": 160
+            },
+            "byRepo": {
+              "click": 69,
+              "hono": 91
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "train": {
+                  "click": 2,
+                  "hono": 1
+                }
+              },
+              "revalidate": {
+                "train": {
+                  "click": 2,
+                  "hono": 1
+                }
+              },
+              "review": {
+                "train": {
+                  "click": 65,
+                  "hono": 89
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 27,
+              "nonEmpty": 127,
+              "unknown": 0
+            },
+            "redacted": 2,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/validation.jsonl",
+          "split": "validation",
+          "lines": 46,
+          "invalidRows": 0,
+          "counts": {
+            "total": 46,
+            "byOperation": {
+              "map": 1,
+              "revalidate": 1,
+              "review": 44
+            },
+            "bySplit": {
+              "validation": 46
+            },
+            "byRepo": {
+              "ripgrep": 46
+            },
+            "byOperationSplitRepo": {
+              "map": {
+                "validation": {
+                  "ripgrep": 1
+                }
+              },
+              "revalidate": {
+                "validation": {
+                  "ripgrep": 1
+                }
+              },
+              "review": {
+                "validation": {
+                  "ripgrep": 44
+                }
+              }
+            },
+            "reviewQuality": {
+              "clean": 27,
+              "nonEmpty": 17,
+              "unknown": 0
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        }
+      ],
+      "counts": {
+        "total": 530,
+        "byOperation": {
+          "map": 12,
+          "revalidate": 12,
+          "review": 506
+        },
+        "bySplit": {
+          "all": 250,
+          "hard_boundary": 30,
+          "test": 44,
+          "train": 160,
+          "validation": 46
+        },
+        "byRepo": {
+          "click": 163,
+          "hono": 184,
+          "ripgrep": 183
+        },
+        "byOperationSplitRepo": {
+          "map": {
+            "all": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "hard_boundary": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "train": {
+              "click": 2,
+              "hono": 1
+            },
+            "validation": {
+              "ripgrep": 1
+            }
+          },
+          "revalidate": {
+            "all": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "hard_boundary": {
+              "click": 2,
+              "hono": 1,
+              "ripgrep": 1
+            },
+            "train": {
+              "click": 2,
+              "hono": 1
+            },
+            "validation": {
+              "ripgrep": 1
+            }
+          },
+          "review": {
+            "all": {
+              "click": 65,
+              "hono": 89,
+              "ripgrep": 88
+            },
+            "hard_boundary": {
+              "click": 21,
+              "ripgrep": 1
+            },
+            "test": {
+              "ripgrep": 44
+            },
+            "train": {
+              "click": 65,
+              "hono": 89
+            },
+            "validation": {
+              "ripgrep": 44
+            }
+          }
+        },
+        "reviewQuality": {
+          "clean": 172,
+          "nonEmpty": 334,
+          "unknown": 0
+        },
+        "redacted": 4,
+        "metadataOnly": 0
+      }
+    }
+  ],
+  "captures": [
+    {
+      "name": "20260522T220000Z-pilot",
+      "path": "/Users/adamjackson/Projects/gemma-training/captures/20260522T220000Z-pilot",
+      "summary": {
+        "schemaVersion": 1,
+        "updatedAt": "2026-05-22T22:54:24.969Z",
+        "captures": 250,
+        "accepted": 250,
+        "rejected": 0,
+        "metadataOnly": 0,
+        "redacted": 2,
+        "byOperation": {
+          "map": 4,
+          "review": 242,
+          "revalidate": 4
+        }
+      },
+      "files": [
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/captures/20260522T220000Z-pilot/captures.jsonl",
+          "lines": 250,
+          "invalidRows": 0,
+          "counts": {
+            "total": 250,
+            "byOperation": {
+              "map": 4,
+              "revalidate": 4,
+              "review": 242
+            },
+            "byRepo": {
+              "click": 69,
+              "hono": 91,
+              "ripgrep": 90
+            },
+            "byStatus": {
+              "accepted": 250
+            },
+            "byValidationStatus": {
+              "schema-valid-operation-valid": 250
+            },
+            "redacted": 2,
+            "metadataOnly": 0
+          }
+        },
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/captures/20260522T220000Z-pilot/triage-subset.jsonl",
+          "lines": 30,
+          "invalidRows": 0,
+          "counts": {
+            "total": 30,
+            "byOperation": {
+              "map": 4,
+              "revalidate": 4,
+              "review": 22
+            },
+            "byRepo": {
+              "unknown": 30
+            },
+            "byStatus": {
+              "unknown": 30
+            },
+            "byValidationStatus": {
+              "schema-valid-operation-valid": 30
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        }
+      ],
+      "counts": {
+        "total": 280,
+        "byOperation": {
+          "map": 8,
+          "revalidate": 8,
+          "review": 264
+        },
+        "byRepo": {
+          "click": 69,
+          "hono": 91,
+          "ripgrep": 90,
+          "unknown": 30
+        },
+        "byStatus": {
+          "accepted": 250,
+          "unknown": 30
+        },
+        "byValidationStatus": {
+          "schema-valid-operation-valid": 280
+        },
+        "redacted": 2,
+        "metadataOnly": 0
+      }
+    },
+    {
+      "name": "20260524T2045Z-scale-smoke",
+      "path": "/Users/adamjackson/Projects/gemma-training/captures/20260524T2045Z-scale-smoke",
+      "summary": {
+        "schemaVersion": 1,
+        "updatedAt": "2026-05-24T20:47:20.426Z",
+        "captures": 3,
+        "accepted": 3,
+        "rejected": 0,
+        "metadataOnly": 0,
+        "redacted": 0,
+        "byOperation": {
+          "map": 1,
+          "review": 1,
+          "revalidate": 1
+        }
+      },
+      "files": [
+        {
+          "path": "/Users/adamjackson/Projects/gemma-training/captures/20260524T2045Z-scale-smoke/captures.jsonl",
+          "lines": 3,
+          "invalidRows": 0,
+          "counts": {
+            "total": 3,
+            "byOperation": {
+              "map": 1,
+              "revalidate": 1,
+              "review": 1
+            },
+            "byRepo": {
+              "click": 3
+            },
+            "byStatus": {
+              "accepted": 3
+            },
+            "byValidationStatus": {
+              "schema-valid-operation-valid": 3
+            },
+            "redacted": 0,
+            "metadataOnly": 0
+          }
+        }
+      ],
+      "counts": {
+        "total": 3,
+        "byOperation": {
+          "map": 1,
+          "revalidate": 1,
+          "review": 1
+        },
+        "byRepo": {
+          "click": 3
+        },
+        "byStatus": {
+          "accepted": 3
+        },
+        "byValidationStatus": {
+          "schema-valid-operation-valid": 3
+        },
+        "redacted": 0,
+        "metadataOnly": 0
+      }
+    }
+  ],
+  "scannedFiles": {
+    "datasetSummaries": [
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/summary.json",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/summary.json",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/summary.json",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/summary.json"
+    ],
+    "datasetJsonl": [
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/all.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/hard_boundary.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/test.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/train.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-map-v0/validation.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/all.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/hard_boundary.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/test.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/train.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-revalidate-v0/validation.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/all.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/hard_boundary.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/test.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/train.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-v0/validation.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/all.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/hard_boundary.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/test.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/train.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/datasets/clawpatch-gemma-windowed-v0/validation.jsonl"
+    ],
+    "captureSummaries": [
+      "/Users/adamjackson/Projects/gemma-training/captures/20260522T220000Z-pilot/summary.json",
+      "/Users/adamjackson/Projects/gemma-training/captures/20260524T2045Z-scale-smoke/summary.json"
+    ],
+    "captureJsonl": [
+      "/Users/adamjackson/Projects/gemma-training/captures/20260522T220000Z-pilot/captures.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/captures/20260522T220000Z-pilot/triage-subset.jsonl",
+      "/Users/adamjackson/Projects/gemma-training/captures/20260524T2045Z-scale-smoke/captures.jsonl"
+    ]
+  },
+  "privacy": {
+    "emittedContentFields": [],
+    "excludedContentFields": [
+      "acceptedOutput",
+      "error",
+      "messages",
+      "prompt",
+      "rawOutput",
+      "rejectedOutput",
+      "schema"
+    ]
+  }
+}

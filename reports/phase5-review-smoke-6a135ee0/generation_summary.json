@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "dataset": "ixianbride/clawpatch-gemma-windowed-v0",
+  "split": "test",
+  "baseModel": "google/gemma-4-E4B-it",
+  "adapter": "ixianbride/gemma-clawpatch-review-windowed-lora-v0",
+  "maxRows": 4,
+  "maxInputLength": 2048,
+  "maxNewTokens": 512,
+  "referenceFindingCounts": [
+    1,
+    0,
+    1,
+    0
+  ],
+  "outputs": [
+    {
+      "label": "base",
+      "rows": 4,
+      "generatorParseableRows": 4,
+      "totalLatencyMs": 132620.047,
+      "avgLatencyMs": 33155.012
+    },
+    {
+      "label": "adapter",
+      "rows": 4,
+      "generatorParseableRows": 4,
+      "totalLatencyMs": 139489.682,
+      "avgLatencyMs": 34872.421
+    }
+  ],
+  "note": "Small Phase 5 review batch generation only; score with evaluate-clawpatch-predictions.mjs before drawing quality conclusions."
+}

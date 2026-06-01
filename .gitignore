@@ -1,0 +1,22 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Nested source checkouts and upstream repos stay managed by their own remotes.
+/vendor/clawpatch/
+/teacher-runs/
+
+# Private or high-volume generated artifacts.
+/captures/
+/datasets/**/*.jsonl
+/reports/**/*.jsonl
+/reports/**/job.log
+/reports/**/base.jsonl
+/reports/**/adapter.jsonl
+/reports/**/reference.jsonl
+
+# Keep lightweight metadata and documentation trackable.
+!/datasets/**/README.md
+!/datasets/**/summary.json
+!/reports/**/*.json
+!/reports/**/*.md

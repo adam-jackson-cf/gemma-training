@@ -1,0 +1,116 @@
+{
+    "lifecycle_status": "validated",
+  "approval_status": "approved",
+  "target_mode": "brownfield",
+  "threshold": 0.2,
+  "readiness": {
+    "status": "ready",
+    "gates": {
+      "non_goals": true,
+      "decision_boundaries": true,
+      "acceptance_criteria": true,
+      "feature_boundaries": true,
+      "target_mode": true,
+      "pressure_pass": true
+    }
+  },
+  "ambiguity": {
+    "score": 0.16,
+    "dimensions": {
+      "intent": 0.8,
+      "outcome": 0.8,
+      "scope": 0.92,
+      "constraints": 0.85,
+      "acceptance": 0.95,
+      "feature_boundaries": 0.85,
+      "context": 0.85,
+      "execution_readiness": 0.9
+    }
+  },
+    "validation_status": "pass",
+  "approval_phrase_guard": true,
+  "round_contract": {
+    "question_round_schema": "references/question-round-schema.md",
+    "unaddressed_dimensions": "references/unaddressed-dimensions.md",
+    "requires_ready_made_options": true,
+    "requires_recommended_default": true,
+    "requires_other_option": true
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "focus": "scope",
+      "status": "answered",
+      "asked_at": "2026-05-22T19:05:25Z",
+      "answered_at": "2026-05-22T19:19:30Z",
+      "chosen_branch": "Option 3: map, review, and revalidate from the start."
+    },
+    {
+      "round": 2,
+      "focus": "acceptance criteria",
+      "status": "answered",
+      "asked_at": "2026-05-22T19:19:30Z",
+      "answered_at": "2026-05-22T19:26:43Z",
+      "chosen_branch": "Option 2: 3 repos and at least 250 accepted captures, with follow-up to Option 3 after approach is proven."
+    },
+    {
+      "round": 3,
+      "focus": "pressure pass",
+      "status": "answered",
+      "asked_at": "2026-05-22T19:26:43Z",
+      "answered_at": "2026-05-22T19:28:00Z",
+      "chosen_branch": "Option 2: accepted captures must be schema-valid and pass Clawpatch validation."
+    },
+    {
+      "round": 4,
+      "focus": "capture location",
+      "status": "answered",
+      "asked_at": "2026-05-22T19:33:14Z",
+      "answered_at": "2026-05-22T19:36:15Z",
+      "chosen_branch": "Option 2: disposable local cloned workspaces under teacher-runs, with captures stored under captures."
+    },
+    {
+      "round": 5,
+      "focus": "repository qualification",
+      "status": "reframed-after-investigation",
+      "asked_at": "2026-05-22T19:37:32Z",
+      "reframed_at": "2026-05-22T19:41:27Z"
+    },
+    {
+      "round": 6,
+      "focus": "repository qualification",
+      "status": "answered",
+      "asked_at": "2026-05-22T19:41:27Z",
+      "answered_at": "2026-05-22T19:51:38Z",
+      "chosen_branch": "Option 2: balanced training-signal standard."
+    }
+  ],
+  "chosen_branches": [
+    "Operation scope: capture map, review, and revalidate from the start.",
+    "Phase 2 collection target: 3 repositories and at least 250 accepted captures, with follow-up to 5 repositories and at least 1,000 accepted captures after pilot proof.",
+    "Teacher-data quality gate: count only schema-valid outputs that pass Clawpatch operation-specific validation.",
+        "Phase 2 capture location: disposable local cloned workspaces under /Users/adamjackson/Projects/gemma-training/teacher-runs/repo-name/, with artifacts under /Users/adamjackson/Projects/gemma-training/captures/run-id/.",
+    "Repository qualification: balanced training-signal standard."
+  ],
+  "rejected_branches": [
+    "Operation scope: review only.",
+    "Operation scope: review plus revalidate only.",
+    "Phase 2 collection target: smoke target only.",
+    "Phase 2 collection target: immediate 5-repository, 1,000-capture dataset seed.",
+    "Teacher-data quality gate: schema-valid only.",
+    "Teacher-data quality gate: full triage required for every pilot capture.",
+    "Phase 2 capture location: active real repo checkouts.",
+    "Phase 2 capture location: remote Hugging Face Jobs teacher generation.",
+    "Repository qualification: Clawpatch-compatible minimum.",
+    "Repository qualification: review-rich standard requiring realistic trust boundaries, active maintenance, and defect history."
+  ],
+  "user_supplied_overrides": [],
+  "approval_phrase_guard": false,
+  "current_blocker": null,
+    "next_action": "request-final-approval",
+  "artifact_root": "/Users/adamjackson/Projects/gemma-training/.enaible/intent-plan/20260522T190525Z-gemma-clawpatch-training",
+  "source_context": [
+    "/Users/adamjackson/Projects/gemma-training/clawpatch-gemma-training-research.md",
+    "/Users/adamjackson/Projects/gemma-training/clawpatch"
+  ]
+}

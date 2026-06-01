@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "operation": "map",
+  "sourceDataset": "ixianbride/clawpatch-gemma-review-v0",
+  "splits": {
+    "train": 3,
+    "validation": 1,
+    "test": 0,
+    "hard_boundary": 4,
+    "all": 4
+  }
+}

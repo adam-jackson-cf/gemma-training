@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "deterministic": true,
+  "operation": "review",
+  "inputs": {
+    "reference": "reports/phase5-review-smoke-6a135ee0/reference.jsonl",
+    "predictions": [
+      {
+        "label": "base",
+        "path": "reports/phase5-review-smoke-6a135ee0/base.jsonl"
+      },
+      {
+        "label": "adapter",
+        "path": "reports/phase5-review-smoke-6a135ee0/adapter.jsonl"
+      }
+    ],
+    "operation": "review"
+  },
+  "reference": {
+    "path": "reports/phase5-review-smoke-6a135ee0/reference.jsonl",
+    "rows": 4,
+    "jsonLineErrors": 0,
+    "outputParseableRows": 4,
+    "schemaValidRows": 4,
+    "cleanRows": 2,
+    "findingRows": 2,
+    "findings": 2
+  },
+  "models": [
+    {
+      "label": "base",
+      "path": "reports/phase5-review-smoke-6a135ee0/base.jsonl",
+      "rows": 4,
+      "jsonLineErrors": 0,
+      "metrics": {
+        "referenceRows": 4,
+        "predictionRows": 4,
+        "extraPredictionRows": 0,
+        "missingPredictionRows": 0,
+        "jsonLineErrors": 0,
+        "outputParseableRows": 4,
+        "schemaValidRows": 2,
+        "evidenceValidRows": 3,
+        "referenceFindings": 2,
+        "predictedFindings": 4,
+        "schemaValidPredictedFindings": 2,
+        "evidenceValidPredictedFindings": 3,
+        "matchedFindings": 0,
+        "cleanReferenceRows": 2,
+        "cleanCorrectRows": 0,
+        "cleanFalsePositiveRows": 2,
+        "nonCleanReferenceRows": 2,
+        "nonCleanAnyPredictionRows": 2,
+        "latency": {
+          "presentRows": 4,
+          "validRows": 4,
+          "invalidRows": 0,
+          "sum": 132620.047,
+          "avg": 33155.01175,
+          "min": 26529.094,
+          "max": 41420.21
+        },
+        "cost": {
+          "presentRows": 0,
+          "validRows": 0,
+          "invalidRows": 0,
+          "sum": 0,
+          "avg": null,
+          "min": null,
+          "max": null
+        },
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "cleanAccuracy": 0,
+        "cleanFalsePositiveRate": 1
+      },
+      "issueSummary": {
+        "evidence.range-outside-files-section": 1,
+        "schema.invalid-inspected-symbols": 1,
+        "schema.invalid-reproduction": 2,
+        "schema.invalid-whyTestsDoNotAlreadyCoverThis": 2
+      }
+    },
+    {
+      "label": "adapter",
+      "path": "reports/phase5-review-smoke-6a135ee0/adapter.jsonl",
+      "rows": 4,
+      "jsonLineErrors": 0,
+      "metrics": {
+        "referenceRows": 4,
+        "predictionRows": 4,
+        "extraPredictionRows": 0,
+        "missingPredictionRows": 0,
+        "jsonLineErrors": 0,
+        "outputParseableRows": 4,
+        "schemaValidRows": 2,
+        "evidenceValidRows": 3,
+        "referenceFindings": 2,
+        "predictedFindings": 4,
+        "schemaValidPredictedFindings": 2,
+        "evidenceValidPredictedFindings": 3,
+        "matchedFindings": 0,
+        "cleanReferenceRows": 2,
+        "cleanCorrectRows": 0,
+        "cleanFalsePositiveRows": 2,
+        "nonCleanReferenceRows": 2,
+        "nonCleanAnyPredictionRows": 2,
+        "latency": {
+          "presentRows": 4,
+          "validRows": 4,
+          "invalidRows": 0,
+          "sum": 139489.682,
+          "avg": 34872.4205,
+          "min": 27978.027,
+          "max": 42927.491
+        },
+        "cost": {
+          "presentRows": 0,
+          "validRows": 0,
+          "invalidRows": 0,
+          "sum": 0,
+          "avg": null,
+          "min": null,
+          "max": null
+        },
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "cleanAccuracy": 0,
+        "cleanFalsePositiveRate": 1
+      },
+      "issueSummary": {
+        "evidence.range-outside-files-section": 1,
+        "schema.invalid-inspected-symbols": 1,
+        "schema.invalid-reproduction": 2,
+        "schema.invalid-whyTestsDoNotAlreadyCoverThis": 2
+      }
+    }
+  ],
+  "pairwiseComparisons": [
+    {
+      "left": "base",
+      "right": "adapter",
+      "metricDeltas": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "cleanAccuracy": 0,
+        "avgLatency": -1717.40875,
+        "totalCost": 0
+      },
+      "findingOverlap": {
+        "bothMatched": 0,
+        "leftOnlyMatched": 0,
+        "rightOnlyMatched": 0,
+        "neitherMatched": 2
+      },
+      "cleanFeatureComparison": {
+        "bothCleanCorrect": 0,
+        "leftOnlyCleanCorrect": 0,
+        "rightOnlyCleanCorrect": 0,
+        "neitherCleanCorrect": 2
+      }
+    }
+  ]
+}

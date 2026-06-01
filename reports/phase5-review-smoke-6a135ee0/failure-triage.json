@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "deterministic": true,
+  "source": "scripts/evaluate-clawpatch-predictions.mjs",
+  "operation": "review",
+  "scoreSchemaVersion": 1,
+  "modelCount": 2,
+  "models": [
+    {
+      "label": "base",
+      "issueSummary": {
+        "evidence.range-outside-files-section": 1,
+        "schema.invalid-inspected-symbols": 1,
+        "schema.invalid-reproduction": 2,
+        "schema.invalid-whyTestsDoNotAlreadyCoverThis": 2
+      },
+      "issueCategorySummary": {
+        "evidence": 1,
+        "schema": 5
+      },
+      "thresholdRelevantMetrics": {
+        "referenceRows": 4,
+        "predictionRows": 4,
+        "extraPredictionRows": 0,
+        "missingPredictionRows": 0,
+        "jsonLineErrors": 0,
+        "outputParseableRows": 4,
+        "outputParseableRate": 1,
+        "schemaValidRows": 2,
+        "schemaValidRate": 0.5,
+        "evidenceValidRows": 3,
+        "evidenceValidRate": 0.75,
+        "referenceFindings": 2,
+        "predictedFindings": 4,
+        "schemaValidPredictedFindings": 2,
+        "schemaValidPredictedFindingRate": 0.5,
+        "evidenceValidPredictedFindings": 3,
+        "evidenceValidPredictedFindingRate": 0.75,
+        "matchedFindings": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "cleanReferenceRows": 2,
+        "cleanCorrectRows": 0,
+        "cleanFalsePositiveRows": 2,
+        "cleanAccuracy": 0,
+        "cleanFalsePositiveRate": 1,
+        "nonCleanReferenceRows": 2,
+        "nonCleanAnyPredictionRows": 2,
+        "nonCleanAnyPredictionRate": 1
+      },
+      "likelyRemediationAreas": {
+        "schemaDiscipline": {
+          "issueCount": 5,
+          "issuesPerReferenceRow": 1.25,
+          "jsonLineErrors": 0,
+          "unparseableRows": 0,
+          "invalidSchemaRows": 2,
+          "invalidSchemaRowRate": 0.5,
+          "invalidSchemaPredictedItems": 2,
+          "invalidSchemaPredictedItemRate": 0.5
+        },
+        "evidenceValidity": {
+          "issueCount": 1,
+          "issuesPerReferenceRow": 0.25,
+          "invalidEvidenceRows": 1,
+          "invalidEvidenceRowRate": 0.25,
+          "invalidEvidenceFindings": 1,
+          "invalidEvidenceFindingRate": 0.25
+        },
+        "cleanFalsePositives": {
+          "cleanReferenceRows": 2,
+          "cleanCorrectRows": 0,
+          "cleanFalsePositiveRows": 2,
+          "cleanFalsePositiveRate": 1,
+          "cleanAccuracy": 0
+        },
+        "recallGaps": {
+          "referenceItems": 2,
+          "matchedItems": 0,
+          "missedItems": 2,
+          "missedItemRate": 1,
+          "recall": 0,
+          "nonCleanReferenceRows": 2,
+          "nonCleanAnyPredictionRows": 2,
+          "nonCleanNoPredictionRows": 0,
+          "nonCleanNoPredictionRate": 0
+        }
+      }
+    },
+    {
+      "label": "adapter",
+      "issueSummary": {
+        "evidence.range-outside-files-section": 1,
+        "schema.invalid-inspected-symbols": 1,
+        "schema.invalid-reproduction": 2,
+        "schema.invalid-whyTestsDoNotAlreadyCoverThis": 2
+      },
+      "issueCategorySummary": {
+        "evidence": 1,
+        "schema": 5
+      },
+      "thresholdRelevantMetrics": {
+        "referenceRows": 4,
+        "predictionRows": 4,
+        "extraPredictionRows": 0,
+        "missingPredictionRows": 0,
+        "jsonLineErrors": 0,
+        "outputParseableRows": 4,
+        "outputParseableRate": 1,
+        "schemaValidRows": 2,
+        "schemaValidRate": 0.5,
+        "evidenceValidRows": 3,
+        "evidenceValidRate": 0.75,
+        "referenceFindings": 2,
+        "predictedFindings": 4,
+        "schemaValidPredictedFindings": 2,
+        "schemaValidPredictedFindingRate": 0.5,
+        "evidenceValidPredictedFindings": 3,
+        "evidenceValidPredictedFindingRate": 0.75,
+        "matchedFindings": 0,
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "cleanReferenceRows": 2,
+        "cleanCorrectRows": 0,
+        "cleanFalsePositiveRows": 2,
+        "cleanAccuracy": 0,
+        "cleanFalsePositiveRate": 1,
+        "nonCleanReferenceRows": 2,
+        "nonCleanAnyPredictionRows": 2,
+        "nonCleanAnyPredictionRate": 1
+      },
+      "likelyRemediationAreas": {
+        "schemaDiscipline": {
+          "issueCount": 5,
+          "issuesPerReferenceRow": 1.25,
+          "jsonLineErrors": 0,
+          "unparseableRows": 0,
+          "invalidSchemaRows": 2,
+          "invalidSchemaRowRate": 0.5,
+          "invalidSchemaPredictedItems": 2,
+          "invalidSchemaPredictedItemRate": 0.5
+        },
+        "evidenceValidity": {
+          "issueCount": 1,
+          "issuesPerReferenceRow": 0.25,
+          "invalidEvidenceRows": 1,
+          "invalidEvidenceRowRate": 0.25,
+          "invalidEvidenceFindings": 1,
+          "invalidEvidenceFindingRate": 0.25
+        },
+        "cleanFalsePositives": {
+          "cleanReferenceRows": 2,
+          "cleanCorrectRows": 0,
+          "cleanFalsePositiveRows": 2,
+          "cleanFalsePositiveRate": 1,
+          "cleanAccuracy": 0
+        },
+        "recallGaps": {
+          "referenceItems": 2,
+          "matchedItems": 0,
+          "missedItems": 2,
+          "missedItemRate": 1,
+          "recall": 0,
+          "nonCleanReferenceRows": 2,
+          "nonCleanAnyPredictionRows": 2,
+          "nonCleanNoPredictionRows": 0,
+          "nonCleanNoPredictionRate": 0
+        }
+      }
+    }
+  ]
+}

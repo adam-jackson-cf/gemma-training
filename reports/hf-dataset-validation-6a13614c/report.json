@@ -1,0 +1,262 @@
+{
+  "datasets": [
+    {
+      "issueCount": 0,
+      "repo": "ixianbride/clawpatch-gemma-review-v0",
+      "splits": {
+        "all": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 4,
+            "commands,outcome,reasoning": 4,
+            "findings,inspected": 242
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4,
+            "revalidate": 4,
+            "review": 242
+          },
+          "rows": 250
+        },
+        "hard_boundary": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 4,
+            "commands,outcome,reasoning": 4,
+            "findings,inspected": 22
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4,
+            "revalidate": 4,
+            "review": 22
+          },
+          "rows": 30
+        },
+        "test": {
+          "assistantKeySets": {
+            "findings,inspected": 44
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "review": 44
+          },
+          "rows": 44
+        },
+        "train": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 3,
+            "commands,outcome,reasoning": 3,
+            "findings,inspected": 154
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 3,
+            "revalidate": 3,
+            "review": 154
+          },
+          "rows": 160
+        },
+        "validation": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 1,
+            "commands,outcome,reasoning": 1,
+            "findings,inspected": 44
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 1,
+            "revalidate": 1,
+            "review": 44
+          },
+          "rows": 46
+        }
+      }
+    },
+    {
+      "issueCount": 0,
+      "repo": "ixianbride/clawpatch-gemma-windowed-v0",
+      "splits": {
+        "all": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 4,
+            "commands,outcome,reasoning": 4,
+            "findings,inspected": 242
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4,
+            "revalidate": 4,
+            "review": 242
+          },
+          "rows": 250
+        },
+        "hard_boundary": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 4,
+            "commands,outcome,reasoning": 4,
+            "findings,inspected": 22
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4,
+            "revalidate": 4,
+            "review": 22
+          },
+          "rows": 30
+        },
+        "test": {
+          "assistantKeySets": {
+            "findings,inspected": 44
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "review": 44
+          },
+          "rows": 44
+        },
+        "train": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 3,
+            "commands,outcome,reasoning": 3,
+            "findings,inspected": 154
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 3,
+            "revalidate": 3,
+            "review": 154
+          },
+          "rows": 160
+        },
+        "validation": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 1,
+            "commands,outcome,reasoning": 1,
+            "findings,inspected": 44
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 1,
+            "revalidate": 1,
+            "review": 44
+          },
+          "rows": 46
+        }
+      }
+    },
+    {
+      "issueCount": 0,
+      "repo": "ixianbride/clawpatch-gemma-map-v0",
+      "splits": {
+        "all": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 4
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4
+          },
+          "rows": 4
+        },
+        "hard_boundary": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 4
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4
+          },
+          "rows": 4
+        },
+        "test": {
+          "assistantKeySets": {},
+          "blankLines": 1,
+          "operationCounts": {},
+          "rows": 0
+        },
+        "train": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 3
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 3
+          },
+          "rows": 3
+        },
+        "validation": {
+          "assistantKeySets": {
+            "changed,created,features,stale": 1
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 1
+          },
+          "rows": 1
+        }
+      }
+    },
+    {
+      "issueCount": 0,
+      "repo": "ixianbride/clawpatch-gemma-revalidate-v0",
+      "splits": {
+        "all": {
+          "assistantKeySets": {
+            "commands,outcome,reasoning": 4
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "revalidate": 4
+          },
+          "rows": 4
+        },
+        "hard_boundary": {
+          "assistantKeySets": {
+            "commands,outcome,reasoning": 4
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "revalidate": 4
+          },
+          "rows": 4
+        },
+        "test": {
+          "assistantKeySets": {},
+          "blankLines": 1,
+          "operationCounts": {},
+          "rows": 0
+        },
+        "train": {
+          "assistantKeySets": {
+            "commands,outcome,reasoning": 3
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "revalidate": 3
+          },
+          "rows": 3
+        },
+        "validation": {
+          "assistantKeySets": {
+            "commands,outcome,reasoning": 1
+          },
+          "blankLines": 0,
+          "operationCounts": {
+            "revalidate": 1
+          },
+          "rows": 1
+        }
+      }
+    }
+  ],
+  "issues": [],
+  "ok": true,
+  "schemaVersion": 1,
+  "source": "hf-jobs-cpu",
+  "totals": {
+    "datasets": 4,
+    "files": 20,
+    "issues": 0,
+    "rows": 1084
+  }
+}

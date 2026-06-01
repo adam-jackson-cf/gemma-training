@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "datasets": [
+    {
+      "name": "clawpatch-gemma-v0",
+      "path": "datasets/clawpatch-gemma-v0",
+      "allowedOperations": [
+        "map",
+        "revalidate",
+        "review"
+      ],
+      "files": {
+        "train": {
+          "path": "datasets/clawpatch-gemma-v0/train.jsonl",
+          "exists": true,
+          "rows": 160,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 3,
+            "revalidate": 3,
+            "review": 154
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 3,
+            "commands,outcome,reasoning": 3,
+            "findings,inspected": 154
+          }
+        },
+        "validation": {
+          "path": "datasets/clawpatch-gemma-v0/validation.jsonl",
+          "exists": true,
+          "rows": 46,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 1,
+            "revalidate": 1,
+            "review": 44
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 1,
+            "commands,outcome,reasoning": 1,
+            "findings,inspected": 44
+          }
+        },
+        "test": {
+          "path": "datasets/clawpatch-gemma-v0/test.jsonl",
+          "exists": true,
+          "rows": 44,
+          "blankLines": 0,
+          "operationCounts": {
+            "review": 44
+          },
+          "assistantKeySets": {
+            "findings,inspected": 44
+          }
+        },
+        "hard_boundary": {
+          "path": "datasets/clawpatch-gemma-v0/hard_boundary.jsonl",
+          "exists": true,
+          "rows": 30,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4,
+            "revalidate": 4,
+            "review": 22
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 4,
+            "commands,outcome,reasoning": 4,
+            "findings,inspected": 22
+          }
+        },
+        "all": {
+          "path": "datasets/clawpatch-gemma-v0/all.jsonl",
+          "exists": true,
+          "rows": 250,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4,
+            "revalidate": 4,
+            "review": 242
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 4,
+            "commands,outcome,reasoning": 4,
+            "findings,inspected": 242
+          }
+        }
+      },
+      "consistency": {
+        "allRows": 250,
+        "regularRows": 250,
+        "regularUniqueRows": 250,
+        "hardBoundaryRows": 30,
+        "hardBoundaryUniqueRows": 30,
+        "extraRegularRows": 0,
+        "missingRegularRows": 0,
+        "extraHardBoundaryRows": 0,
+        "duplicateRowsInAll": 0,
+        "duplicateRowsBySplit": {
+          "train": 0,
+          "validation": 0,
+          "test": 0,
+          "hard_boundary": 0
+        },
+        "overlappingRegularRows": 0
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "clawpatch-gemma-windowed-v0",
+      "path": "datasets/clawpatch-gemma-windowed-v0",
+      "allowedOperations": [
+        "map",
+        "revalidate",
+        "review"
+      ],
+      "files": {
+        "train": {
+          "path": "datasets/clawpatch-gemma-windowed-v0/train.jsonl",
+          "exists": true,
+          "rows": 160,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 3,
+            "revalidate": 3,
+            "review": 154
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 3,
+            "commands,outcome,reasoning": 3,
+            "findings,inspected": 154
+          }
+        },
+        "validation": {
+          "path": "datasets/clawpatch-gemma-windowed-v0/validation.jsonl",
+          "exists": true,
+          "rows": 46,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 1,
+            "revalidate": 1,
+            "review": 44
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 1,
+            "commands,outcome,reasoning": 1,
+            "findings,inspected": 44
+          }
+        },
+        "test": {
+          "path": "datasets/clawpatch-gemma-windowed-v0/test.jsonl",
+          "exists": true,
+          "rows": 44,
+          "blankLines": 0,
+          "operationCounts": {
+            "review": 44
+          },
+          "assistantKeySets": {
+            "findings,inspected": 44
+          }
+        },
+        "hard_boundary": {
+          "path": "datasets/clawpatch-gemma-windowed-v0/hard_boundary.jsonl",
+          "exists": true,
+          "rows": 30,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4,
+            "revalidate": 4,
+            "review": 22
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 4,
+            "commands,outcome,reasoning": 4,
+            "findings,inspected": 22
+          }
+        },
+        "all": {
+          "path": "datasets/clawpatch-gemma-windowed-v0/all.jsonl",
+          "exists": true,
+          "rows": 250,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4,
+            "revalidate": 4,
+            "review": 242
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 4,
+            "commands,outcome,reasoning": 4,
+            "findings,inspected": 242
+          }
+        }
+      },
+      "consistency": {
+        "allRows": 250,
+        "regularRows": 250,
+        "regularUniqueRows": 250,
+        "hardBoundaryRows": 30,
+        "hardBoundaryUniqueRows": 30,
+        "extraRegularRows": 0,
+        "missingRegularRows": 0,
+        "extraHardBoundaryRows": 0,
+        "duplicateRowsInAll": 0,
+        "duplicateRowsBySplit": {
+          "train": 0,
+          "validation": 0,
+          "test": 0,
+          "hard_boundary": 0
+        },
+        "overlappingRegularRows": 0
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "clawpatch-gemma-map-v0",
+      "path": "datasets/clawpatch-gemma-map-v0",
+      "allowedOperations": [
+        "map"
+      ],
+      "files": {
+        "train": {
+          "path": "datasets/clawpatch-gemma-map-v0/train.jsonl",
+          "exists": true,
+          "rows": 3,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 3
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 3
+          }
+        },
+        "validation": {
+          "path": "datasets/clawpatch-gemma-map-v0/validation.jsonl",
+          "exists": true,
+          "rows": 1,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 1
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 1
+          }
+        },
+        "test": {
+          "path": "datasets/clawpatch-gemma-map-v0/test.jsonl",
+          "exists": true,
+          "rows": 0,
+          "blankLines": 1,
+          "operationCounts": {},
+          "assistantKeySets": {}
+        },
+        "hard_boundary": {
+          "path": "datasets/clawpatch-gemma-map-v0/hard_boundary.jsonl",
+          "exists": true,
+          "rows": 4,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 4
+          }
+        },
+        "all": {
+          "path": "datasets/clawpatch-gemma-map-v0/all.jsonl",
+          "exists": true,
+          "rows": 4,
+          "blankLines": 0,
+          "operationCounts": {
+            "map": 4
+          },
+          "assistantKeySets": {
+            "changed,created,features,stale": 4
+          }
+        }
+      },
+      "consistency": {
+        "allRows": 4,
+        "regularRows": 4,
+        "regularUniqueRows": 4,
+        "hardBoundaryRows": 4,
+        "hardBoundaryUniqueRows": 4,
+        "extraRegularRows": 0,
+        "missingRegularRows": 0,
+        "extraHardBoundaryRows": 0,
+        "duplicateRowsInAll": 0,
+        "duplicateRowsBySplit": {
+          "train": 0,
+          "validation": 0,
+          "test": 0,
+          "hard_boundary": 0
+        },
+        "overlappingRegularRows": 0
+      },
+      "issueCount": 0
+    },
+    {
+      "name": "clawpatch-gemma-revalidate-v0",
+      "path": "datasets/clawpatch-gemma-revalidate-v0",
+      "allowedOperations": [
+        "revalidate"
+      ],
+      "files": {
+        "train": {
+          "path": "datasets/clawpatch-gemma-revalidate-v0/train.jsonl",
+          "exists": true,
+          "rows": 3,
+          "blankLines": 0,
+          "operationCounts": {
+            "revalidate": 3
+          },
+          "assistantKeySets": {
+            "commands,outcome,reasoning": 3
+          }
+        },
+        "validation": {
+          "path": "datasets/clawpatch-gemma-revalidate-v0/validation.jsonl",
+          "exists": true,
+          "rows": 1,
+          "blankLines": 0,
+          "operationCounts": {
+            "revalidate": 1
+          },
+          "assistantKeySets": {
+            "commands,outcome,reasoning": 1
+          }
+        },
+        "test": {
+          "path": "datasets/clawpatch-gemma-revalidate-v0/test.jsonl",
+          "exists": true,
+          "rows": 0,
+          "blankLines": 1,
+          "operationCounts": {},
+          "assistantKeySets": {}
+        },
+        "hard_boundary": {
+          "path": "datasets/clawpatch-gemma-revalidate-v0/hard_boundary.jsonl",
+          "exists": true,
+          "rows": 4,
+          "blankLines": 0,
+          "operationCounts": {
+            "revalidate": 4
+          },
+          "assistantKeySets": {
+            "commands,outcome,reasoning": 4
+          }
+        },
+        "all": {
+          "path": "datasets/clawpatch-gemma-revalidate-v0/all.jsonl",
+          "exists": true,
+          "rows": 4,
+          "blankLines": 0,
+          "operationCounts": {
+            "revalidate": 4
+          },
+          "assistantKeySets": {
+            "commands,outcome,reasoning": 4
+          }
+        }
+      },
+      "consistency": {
+        "allRows": 4,
+        "regularRows": 4,
+        "regularUniqueRows": 4,
+        "hardBoundaryRows": 4,
+        "hardBoundaryUniqueRows": 4,
+        "extraRegularRows": 0,
+        "missingRegularRows": 0,
+        "extraHardBoundaryRows": 0,
+        "duplicateRowsInAll": 0,
+        "duplicateRowsBySplit": {
+          "train": 0,
+          "validation": 0,
+          "test": 0,
+          "hard_boundary": 0
+        },
+        "overlappingRegularRows": 0
+      },
+      "issueCount": 0
+    }
+  ],
+  "totals": {
+    "datasets": 4,
+    "files": 20,
+    "rows": 1084,
+    "issues": 0
+  },
+  "issues": []
+}
