@@ -4,6 +4,22 @@
 
 Continue work in `/Users/adamjackson/Projects/gemma-training` toward `goal.md`: complete Gemma-backed Clawpatch through Phase 7 for `map`, `review`, and `revalidate`, while keeping `fix` unsupported.
 
+Repository setup:
+
+- Parent repo: `https://github.com/adam-jackson-cf/gemma-training.git`
+- Parent branch/commit: `main` at `cb299f7 chore: initialize gemma training workspace`
+- Clawpatch fork: `https://github.com/adam-jackson-cf/clawpatch.git`
+- Clawpatch branch/commit: `opt-in-provider-capture` at `0dfda6f chore(capture): scale teacher corpus targets`
+- After cloning the parent repo, recreate the ignored vendor checkout with:
+
+```sh
+mkdir -p vendor
+git clone --branch opt-in-provider-capture https://github.com/adam-jackson-cf/clawpatch.git vendor/clawpatch
+git -C vendor/clawpatch remote add upstream https://github.com/openclaw/clawpatch.git
+pnpm -C vendor/clawpatch install
+pnpm -C vendor/clawpatch build
+```
+
 Start by reading:
 
 - `goal.md`
@@ -20,7 +36,7 @@ Current state:
 - Phase 5 quality gap is open: the current adapter generated parseable rows but scored F1 `0` and clean accuracy `0`.
 - Phase 6 is open: `scripts/run-openai-compatible-smoke.mjs` exists, but no live Gemma OpenAI-compatible endpoint smoke has run.
 - Phase 7 is open: no scaled Codex-vs-Gemma operational comparison exists.
-- Nested `vendor/clawpatch` repo is clean and ahead by 3 commits:
+- Nested `vendor/clawpatch` repo has been pushed to `adam-jackson-cf/clawpatch` branch `opt-in-provider-capture`:
   - `6a33df7 feat(provider): add openai-compatible provider`
   - `3de2a44 test(provider): cover openai-compatible operations`
   - `0dfda6f chore(capture): scale teacher corpus targets`
@@ -31,6 +47,8 @@ Important constraints:
 - Do not silently fall back from Gemma to Codex in active Gemma validation runs.
 - Do not treat parseability, training loss, or a single smoke as model quality.
 - Do not commit private captures, secrets, provider credentials, or raw private transcripts into the Clawpatch repo.
+- Raw captures, dataset JSONL rows, prediction JSONL rows, job logs, `teacher-runs/`, and `vendor/clawpatch/` are intentionally ignored in the parent repo.
+- Fresh clones need private Hugging Face access to the dataset/model repos before training or scoring can continue from Hub assets.
 - A materially larger paid capture/training campaign requires explicit user approval for scope, budget ceiling, provider spend, and stop conditions.
 - Further HF jobs should wait until the previously exposed HF token has rotation evidence.
 
@@ -44,7 +62,7 @@ What to do first:
 
 - `goal.md`: Source of truth for objective, scope boundaries, decision boundaries, and definition of done.
 - `goal-tracker.md`: Current state, phase status, commits, verification evidence, blockers, and decisions.
-- `vendor/clawpatch/`: Nested Clawpatch git repo; clean and ahead by 3 commits.
+- `vendor/clawpatch/`: Ignored nested Clawpatch git repo; clone from `adam-jackson-cf/clawpatch` branch `opt-in-provider-capture`.
 - `vendor/clawpatch/src/provider.ts`: OpenAI-compatible provider implementation.
 - `vendor/clawpatch/src/provider.test.ts`: Provider tests, including `map`, `revalidate`, and unsupported `fix`.
 - `vendor/clawpatch/docs/providers.md`: Provider docs.
@@ -64,8 +82,8 @@ What to do first:
 - `reports/clawpatch-corpus-coverage.json`: Current retained corpus gaps.
 - `reports/corpus-expansion-plan.json`: 21-repo expansion plan under bounded assumptions.
 - `reports/paid-scale-approval-request.md`: Approval package for paid scale-up.
-- `reports/phase5-review-smoke-6a135ee0/`: Retained generation artifacts, score, quality summary, and failure triage.
-- `captures/20260524T2045Z-scale-smoke/`: One-repo capture smoke with 3 accepted captures.
+- `reports/phase5-review-smoke-6a135ee0/`: Tracked aggregate score, quality summary, generation summary, and failure triage. Raw `base.jsonl`, `adapter.jsonl`, `reference.jsonl`, and `job.log` are ignored and not present in a fresh clone.
+- `captures/20260524T2045Z-scale-smoke/`: Local ignored one-repo capture smoke with 3 accepted captures. It is documented in tracked reports, but the raw capture directory is not present in a fresh clone.
 - `model-cards/gemma-clawpatch-review-windowed-lora-v0/README.md`: Private model card updated to document failed quality smoke.
 
 ## Key Context
@@ -89,6 +107,13 @@ Corpus state:
 - Current retained curated corpus remains 242 review, 4 revalidate, 4 map.
 - Gaps are review +258, revalidate +96, map +21.
 - One-repo capture smoke `20260524T2045Z-scale-smoke` produced accepted map/review/revalidate records and validates the capture path, but it does not close Phase 2.
+
+Private asset state:
+
+- Private Hub datasets used by the current workspace: `ixianbride/clawpatch-gemma-review-v0`, `ixianbride/clawpatch-gemma-windowed-v0`, `ixianbride/clawpatch-gemma-map-v0`, and `ixianbride/clawpatch-gemma-revalidate-v0`.
+- Private Hub model repo used by the current workspace: `ixianbride/gemma-clawpatch-review-windowed-lora-v0`.
+- A colleague needs access to those Hub repos, plus their own Hugging Face token configured locally, before running HF Jobs or pulling/pushing private artifacts.
+- The parent Git repo intentionally tracks dataset cards, summaries, reports, and tooling rather than raw private training rows.
 
 Approval/blocker state:
 
